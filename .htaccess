@@ -1,12 +1,7 @@
-RewriteRule ^([a-zA-Z0-9-]+).pdf$ pdf-generator.php?title=$1 [L]
 RewriteRule ^file/(.*)$ /time.php?file=$1 [L]
-RewriteRule ^pages/([0-9]+)$ index.php?page=$1 [L]
-RewriteRule ^(.+)\.xml$ sitemap.php [L]
+
 <IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteBase /
-RewriteRule ^index\.php$ - [L]
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /index.php [L]
+RewriteRule ^(.+)\.xml$ sitemap.php [L]
+RewriteRule ^(.+)\.pdf$ /mpdfgen1.php?file=$1 [L]
 </IfModule>

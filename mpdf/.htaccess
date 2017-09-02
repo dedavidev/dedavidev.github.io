@@ -1,0 +1,4 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule ^(.*).pdf$ /pdfviewer.php?file=$1 [L]
+</IfModule>
